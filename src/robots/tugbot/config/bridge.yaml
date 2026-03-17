@@ -1,0 +1,47 @@
+- ros_topic_name: /cmd_vel
+  gz_topic_name: /cmd_vel
+  ros_type_name: geometry_msgs/msg/Twist
+  gz_type_name: ignition.msgs.Twist
+  direction: ROS_TO_GZ
+
+- ros_topic_name: /odom
+  gz_topic_name: /model/tugbot/odometry
+  ros_type_name: nav_msgs/msg/Odometry
+  gz_type_name: ignition.msgs.Odometry
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /scan
+  gz_topic_name: /world/world_demo/model/tugbot/link/scan_front/sensor/scan_front/scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: ignition.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /scan_back
+  gz_topic_name: /world/world_demo/model/tugbot/link/scan_back/sensor/scan_back/scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: ignition.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /scan_omni
+  gz_topic_name: /world/world_demo/model/tugbot/link/scan_omni/sensor/scan_omni/scan
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: ignition.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /imu
+  gz_topic_name: /world/world_demo/model/tugbot/link/imu_link/sensor/imu/imu
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: ignition.msgs.IMU
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: ignition.msgs.Clock
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /camera/image
+  gz_topic_name: /world/world_demo/model/tugbot/link/camera_front/sensor/color/image
+  ros_type_name: sensor_msgs/msg/Image
+  gz_type_name: ignition.msgs.Image
+  direction: GZ_TO_ROS

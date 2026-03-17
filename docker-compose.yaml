@@ -1,0 +1,20 @@
+services:
+  gazebo:
+    image: gazebo-humble:latest
+    container_name: gazebo-dev
+    network_mode: host
+    ipc: host
+    stdin_open: true
+    tty: true
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - video
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - ./src:/home/ros2_ws/src
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    working_dir: /home/ros2_ws
+    command: ["bash", "-lc", "tail -f /dev/null"]
